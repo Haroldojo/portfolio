@@ -1,0 +1,161 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Navbar Styling */
+header {
+    position: fixed;
+    width: 100%;
+    background-color: transparent;
+    padding: 15px 30px;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #ff66b2;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #ff66b2;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 50px;
+    width: 100%;
+    background-color: #000;
+}
+
+.hero-content {
+    max-width: 500px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    color: #f36f27;
+    margin-bottom: 10px;
+}
+
+.hero-content h3 {
+    font-size: 28px;
+    color: white;
+}
+
+.hero-content .highlight {
+    color: #f36f27;
+}
+
+.hero-content p {
+    font-size: 16px;
+    color: #999;
+    margin-bottom: 20px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 25px;
+    transition: 0.3s ease;
+}
+
+.hire-btn {
+    background-color: #ff66b2;
+    color: white;
+}
+
+.learn-btn {
+    background-color: white;
+    color: #000;
+}
+
+button:hover {
+    background-color: #f36f27;
+    color: white;
+}
+
+/* Hero Image */
+.hero-image img {
+    border-radius: 50%;
+    width: 300px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Leaves Animation */
+#leaves-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* So it doesn't block interactions */
+    z-index: 1; /* Place it above the content */
+}
+
+.leaf {
+    position: absolute;
+    top: -100px;
+    width: 30px; /* Adjust size of the leaves */
+    height: auto;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
